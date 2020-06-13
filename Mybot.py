@@ -18,6 +18,8 @@ class Mybot:
 
     @myBot.message_handler(commands=['start'])
     def start(message):
+        photo = open('img/rpl1.jfif', 'rb')
+        myBot.send_photo(message.from_user.id, photo)
         teks = mytoken.SAPA + "\n" + "\n" + "/help : Untuk melihat semua perintah yang dapat di lakukan Fidelya" +"\n" + "\n" \
                         "-- admin & developer @Fikri_05 - SMK Taruna Bhakti -- " + "\n" + "\n" + \
                         "⌚ Hari ini tanggal "+str(waktusekarang)
